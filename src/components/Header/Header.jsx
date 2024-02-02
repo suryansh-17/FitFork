@@ -37,13 +37,20 @@ function Header() {
   ];
 
   return (
-    <header className="py-3 shadow bg-gray-500">
+    <header className="py-3 shadow bg-green-50">
       <Container>
-        <nav className="flex">
+        <nav className="flex w-full">
+          <div className="portrait:hidden flex text-5xl text-green-600 font-Protest font-bold  ml-3 mr-7 items-center">
+            <Link to="/">FitFork</Link>
+          </div>
           <div className="mr-4">
             <Link to="/">
-              <Logo width="70px" />
+              <Logo width="70vh" />
             </Link>
+          </div>
+          {/* small screen */}
+          <div className="landscape:hidden flex text-3xl text-green-600 font-Protest font-bold  ml-3 mr-4 items-center">
+            <Link to="/">FitFork</Link>
           </div>
           {/*Main nav bar*/}
           <ul className="portrait:hidden flex ml-auto">
@@ -52,7 +59,7 @@ function Header() {
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className="inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                    className="inline-block px-6 py-2 duration-200 font-mono text-xl m-2 items-center text-green-600 hover:bg-green-500 hover:text-white rounded-full"
                   >
                     {item.name}
                   </button>
@@ -67,13 +74,13 @@ function Header() {
           </ul>
           <div className="landscape:hidden flex items-center ml-auto inset-y-0 right-0">
             <button onClick={() => setToggleMenu(!toggleMenu)}>
-              <IoReorderThreeOutline />
+              <IoReorderThreeOutline className="text-4xl text-green-600" />
             </button>
           </div>
 
           {/*mobile nav bar*/}
           <div
-            className={`fixed right-5 z-40 rounded-2xl bg-gray-100 overflow-hidden flex flex-col mt-7 landscape:hidden gap-12  origin-top duration-700 ${
+            className={`fixed right-5 z-50 top-9 rounded-2xl bg-green-200  text-green-600 overflow-hidden flex flex-col mt-7 landscape:hidden gap-12  origin-top duration-700 ${
               !toggleMenu ? "h-0" : "h-100vh"
             }`}
           >
@@ -85,7 +92,7 @@ function Header() {
                       <li key={item.name}>
                         <button
                           onClick={() => navigate(item.slug)}
-                          className="inline-block px-6 py-2 duration-200 hover:bg-blue-100 rounded-full"
+                          className="inline-block px-6 py-2 duration-200 rounded-full"
                         >
                           {item.name}
                         </button>
