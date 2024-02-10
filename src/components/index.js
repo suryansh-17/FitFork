@@ -12,7 +12,9 @@ import Button from "./Button";
 // import PostCard from "./PostCard";
 import AuthLayout from "./AuthLayout";
 import Input from "./Input";
+import Hero from "./Hero";
 export {
+  Hero,
   Header,
   Footer,
   Container,
