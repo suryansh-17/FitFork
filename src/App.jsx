@@ -34,7 +34,11 @@ function App() {
         </div>
       </div>
     </>
-  ) : null;
+  ) : (
+    <>
+      <div>LOADING</div>
+    </>
+  );
 }
 
 export default App;
