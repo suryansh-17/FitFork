@@ -4,6 +4,7 @@ function Select({ options, label, className, ...props }, ref) {
   const id = useId();
   return (
     <div className="w-full">
+      Post Status:
       {label && <label htmlFor={id} className=""></label>}
       <select
         {...props}

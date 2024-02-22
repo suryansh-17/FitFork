@@ -6,10 +6,11 @@ function MyPosts() {
   const [posts, setPosts] = useState([]);
 
   const userData = useSelector((state) => state.auth.userData);
+
   function isAuthor(post, userData) {
     return post && userData ? post.userId === userData.$id : false;
   }
-  //   useEffect(() => {}, []);
+
   appwriteService.getPosts([]).then((posts) => {
     if (posts) {
       setPosts(posts.documents);
