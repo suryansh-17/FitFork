@@ -13,7 +13,7 @@ export default function Home() {
       <img
         src={bgImgVerical}
         alt=""
-        className="landscape:hidden absolute flex opacity-70 -z-10 overflow-hidden"
+        className="landscape:hidden absolute flex opacity-60 -z-10 overflow-hidden"
       />
       <Hero />
     </div>
