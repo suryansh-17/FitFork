@@ -30,7 +30,7 @@ function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center w-full lg:mt-16 lg:mb-20">
+    <div className="flex items-center justify-center w-full mt-6 lg:mt-16 lg:mb-20">
       <div
         className={`mx-auto bg-opacity-90 max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}
       >

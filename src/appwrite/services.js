@@ -42,9 +42,12 @@ export class Service {
     }
   }
 
-  async updatePost(slug, { title, content, featuredImage, status }) {
+  async updatePost(
+    slug,
+    { title, content, featuredImage, status, userId, userName }
+  ) {
     try {
-      return await this.databases.createDocument(
+      return await this.databases.updateDocument(
         conf.appwriteDatabaseId,
         conf.appwriteCollectionId,
         slug,

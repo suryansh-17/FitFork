@@ -11,7 +11,7 @@ export default function Post() {
   const navigate = useNavigate();
 
   const userData = useSelector((state) => state.auth.userData);
-
+  if (!userData) window.location.reload();
   const isAuthor = post && userData ? post.userId === userData.$id : false;
 
   useEffect(() => {

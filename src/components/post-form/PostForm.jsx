@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 export default function PostForm({ post }) {
   const userData = useSelector((state) => state.auth.userData);
-
+  if (!userData) window.location.reload();
   const { register, handleSubmit, watch, setValue, control, getValues } =
     useForm({
       defaultValues: {
@@ -22,6 +22,7 @@ export default function PostForm({ post }) {
 
   const submit = async (data) => {
     if (post) {
+      console.log(post);
       const file = data.image[0]
         ? await appwriteService.uploadFile(data.image[0])
         : null;
@@ -32,6 +33,7 @@ export default function PostForm({ post }) {
 
       const dbPost = await appwriteService.updatePost(post.$id, {
         ...data,
+
         featuredImage: file ? file.$id : undefined,
       });
 
