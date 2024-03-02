@@ -8,7 +8,7 @@ FitFork is designed to provide a platform for health enthusiasts to share their 
 
 ## Demo URL
 
-[FitFork Demo](fit-fork.vercel.app) 
+[Fit-Fork Live Link](https://fit-fork.vercel.app/)
 
 ## Tech Stack
 
